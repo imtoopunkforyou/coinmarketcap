@@ -23,7 +23,7 @@ def links_on_page(url):
     
     coins_links = []
     browser.get(url)
-    time.sleep(4)
+    time.sleep(5)
     links_elements = browser.find_elements_by_class_name('cmc-link')
     all_links_in_page = []
     for link in links_elements:
@@ -39,7 +39,7 @@ def links_on_page(url):
 
 def parse_info_about_coin(link):
     response = requests.get(link)
-    time.sleep(3)
+    time.sleep(5)
     soup = BeautifulSoup(response.text, 'lxml')
     title = soup.find('h2').get_text()
     price = soup.find('div', class_='priceValue').get_text()
