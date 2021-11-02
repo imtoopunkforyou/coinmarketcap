@@ -68,7 +68,7 @@ if __name__ == "__main__":
                 info = parse_info_about_coin(link)
                 writer.writerow(info)
                 count+=1
-                print("Количество готовых строк со страницы "+str(i)+": "+str(count))
+                print("Количество готовых строк: "+str(count))
     print("Преобразую данныe в формат .xlsx \n")
     text_date = str(datetime.today())
     text_date = text_date.replace('-', '_')
